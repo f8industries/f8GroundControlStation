@@ -134,7 +134,7 @@ QList<QcItem *> QcGaugeWidget::items()
 
 
 
-void QcGaugeWidget::paintEvent(QPaintEvent */*paintEvt*/)
+void QcGaugeWidget::paintEvent(QPaintEvent *paintEvt)
 {
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);

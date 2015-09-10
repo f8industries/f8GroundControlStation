@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1108</width>
-    <height>690</height>
+    <width>674</width>
+    <height>422</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -176,7 +176,11 @@
      <widget class="QWidget" name="VideoPage">
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <widget class="QGraphicsView" name="graphicsView"/>
+        <widget class="QLabel" name="videoLabel">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

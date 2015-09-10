@@ -34,6 +34,9 @@ private:
 	void setParams();
 	void setUdp();
 
+	void image2Pixmap(QImage &img,QPixmap &pixmap);
+    
+
 	SystemParameters params;
 
 public slots:
@@ -41,6 +44,10 @@ public slots:
 	void setMapView();
 	void setPlotView();
 	void changeCurrentIndex(int idx);
+
+	void changeLabel(int i);
+	void displayFrame(QImage);
+    
 
 	
 };

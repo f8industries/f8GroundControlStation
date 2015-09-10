@@ -30,14 +30,14 @@ void f8GCS::setConnections()
 void f8GCS::setParams()
 {
 		/*params.createSchema();*/
-	qDebug()<< params.getValue(QString("telemetry/adress")); //
+	//qDebug()<< params.getValue(QString("telemetry/adress")); //
 }
 
 void f8GCS::setUdp()
 {
-	UdpQtServer udpServer;
+	//UdpQtServer udpServer;
 
-	udpServer.HelloUDP();
+	//udpServer.HelloUDP();
 }
 
 void f8GCS::createGauge()
@@ -84,4 +84,27 @@ void f8GCS::changeCurrentIndex(int index_)
 		ui.mainStackedWidget->setCurrentIndex(index_);
 		ui.sideStackedWidget->setCurrentIndex(index_);
 	}
+}
+
+void f8GCS::changeLabel(int i)
+{
+	ui.errorLabel->setText(QString::number(i));
+
+}
+
+void f8GCS::image2Pixmap(QImage &img,QPixmap &pixmap)
+{
+    pixmap = QPixmap(img.size());
+    QPainter painter;
+    painter.begin(&pixmap);
+    painter.drawImage(0,0,img);
+    painter.end();
+}
+
+void f8GCS::displayFrame(QImage frame)
+{
+    QPixmap p;
+    image2Pixmap(frame,p);
+	ui.videoLabel->setPixmap(p);
+   // ui->labelVideoFrame->setPixmap(p);
 }
